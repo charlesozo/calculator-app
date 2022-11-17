@@ -1,33 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  
+  font-family: "Roboto Slab", serif;
 }
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   font-size: 1rem;
 }
-.main-calc{
- width: 500px;
-height: 80vh;
-max-height: 550px;
+.main-calc {
+  width: 500px;
+  height: 80vh;
+  max-height: 550px;
 }
 /* .main-calc:hover{
   transform: scale(0.7,0.8);
 } */
-.main-display{
+.main-display {
   width: 100%;
   height: 40%;
   /* border: 2px solid green; */
-  background-color:  white;
+  background-color: white;
 }
-.after-display{
+.after-display {
   height: 50%;
   text-align: end;
   display: flex;
@@ -37,7 +36,7 @@ max-height: 550px;
   color: orange;
   overflow-x: hidden;
 }
-.display{
+.display {
   height: 50%;
   /* border: 2px solid red; */
   text-align: end;
@@ -48,26 +47,22 @@ max-height: 550px;
   align-items: flex-end;
   overflow-x: hidden;
 }
-.main-body{
+.main-body {
   width: 100%;
   height: 60%;
-   border: 2px solid blue;
-   
-   position: relative;
-  
+  position: relative;
 }
-.number-section{
+.number-section {
   width: 80%;
   /* border: 2px solid blue; */
   height: 100%;
   margin-right: 100px;
   background-color: #070702;
 }
-.numbers{
+.numbers {
   height: 100%;
 }
-.no{
-  /* border: 1px solid red; */
+.no {
   height: 25%;
   text-align: center;
   font-size: 1.7rem;
@@ -76,22 +71,21 @@ max-height: 550px;
   padding-top: 15px;
 }
 
-#clear{
+#clear {
   background-color: #f4e660;
   border-radius: 30px;
   color: #0e0d04;
 }
-.symbol-section{
+.symbol-section {
   position: absolute;
   width: 20%;
   height: 100%;
   background-color: #f4e660;
   top: 0;
-  /* left: 23.6em; */
   right: 0;
   display: block;
 }
-.symbol{
+.symbol {
   /* border: 1px solid green; */
   height: calc(100% / 6);
   font-size: 1.4rem;
@@ -101,17 +95,17 @@ max-height: 550px;
 }
 
 @media only screen and (max-width: 425px) {
-  .main-calc{
+  .main-calc {
     width: 95%;
     margin-right: 17px;
-  } 
   }
-  @media only screen and (min-width:900px){
-    .no:not(#clear):hover{
-      opacity: 0.8;
-      background-color: #76756d
-    }
-    .symbol:hover{
-      background-color: rgb(190, 100, 21);
-    }
+}
+@media only screen and (min-width: 900px) {
+  .no:not(#clear):hover {
+    opacity: 0.8;
+    background-color: #76756d;
   }
+  .symbol:hover {
+    background-color: rgb(190, 100, 21);
+  }
+}
