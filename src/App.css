@@ -96,15 +96,13 @@ header {
 @media only screen and (max-width: 425px) {
   .main-calc {
     width: 95%;
-    margin-right: 15px;
+    margin-right: 13px;
   }
-  .display{
-    border: 1px solid green;
-    text-align: end;
+  .display {
+    text-align: start;
   }
-  .after-display{
-    border: 1px solid yellow;
-    text-align: end;
+  .after-display {
+    text-align: start;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -115,5 +113,4 @@ header {
   .symbol:hover {
     background-color: rgb(190, 100, 21);
   }
-  
 }
