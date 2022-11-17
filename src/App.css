@@ -40,11 +40,17 @@ header {
   height: 50%;
   /* border: 2px solid red; */
   text-align: end;
-  font-size: 2.3rem;
+  /* font-size: 2.3rem; */
   display: flex;
   justify-content: end;
   align-items: flex-end;
   overflow-x: hidden;
+}
+.display-big{
+  font-size: 2.3rem;
+}
+.display-small{
+  font-size: 1.5rem;
 }
 .main-body {
   width: 100%;

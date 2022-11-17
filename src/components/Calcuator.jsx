@@ -93,7 +93,7 @@ const Calcuator = () => {
     if (Answer == "Infinity" || isNaN(Answer)) {
       Answer = "undefined";
     }
-    console.log(Answer)
+    console.log(Answer);
     setMyNo(Answer.toString());
     setFinalanswer(true);
   }
@@ -110,8 +110,15 @@ const Calcuator = () => {
           <div className="after-display">
             {displayResult === "" ? mySymbol : displayResult}
           </div>
-          <div className="display" id="display">
-            {myNo.length >= 0 && myNo.length < 16 ? myNo : myNo.slice(0, 15)}
+          <div
+            className={
+              myNo.length <= 20
+                ? "display display-big"
+                : "display display-small"
+            }
+            id="display"
+          >
+            {myNo}
           </div>
         </div>
         <div className="main-body">
