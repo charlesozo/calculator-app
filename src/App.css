@@ -105,3 +105,8 @@ max-height: 550px;
 .symbol:hover{
   background-color: rgb(190, 100, 21);
 }
+@media only screen and (max-width: 500px) {
+  .main-calc{
+    transform: scale(0.7,0.8);
+  } 
+}
