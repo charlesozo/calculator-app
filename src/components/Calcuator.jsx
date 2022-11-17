@@ -112,7 +112,7 @@ const Calcuator = () => {
           </div>
           <div
             className={
-              myNo.length <= 20
+              myNo.length <= 16
                 ? "display display-big"
                 : "display display-small"
             }
