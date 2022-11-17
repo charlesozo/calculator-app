@@ -90,9 +90,10 @@ const Calcuator = () => {
         Answer = "Synthax error";
       }
     }
-    if (Answer === "Infinity" || isNaN(Answer)) {
+    if (Answer == "Infinity" || isNaN(Answer)) {
       Answer = "undefined";
     }
+    console.log(Answer)
     setMyNo(Answer.toString());
     setFinalanswer(true);
   }

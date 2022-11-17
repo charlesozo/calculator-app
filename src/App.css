@@ -69,6 +69,13 @@ header {
   cursor: pointer;
   padding-top: 15px;
 }
+.no:not(#clear):hover {
+  opacity: 0.8;
+  background-color: #76756d;
+}
+.symbol:hover {
+  background-color: rgb(190, 100, 21);
+}
 
 #clear {
   background-color: #f4e660;
@@ -103,14 +110,5 @@ header {
   }
   .after-display {
     text-align: start;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .no:not(#clear):hover {
-    opacity: 0.8;
-    background-color: #76756d;
-  }
-  .symbol:hover {
-    background-color: rgb(190, 100, 21);
   }
 }
