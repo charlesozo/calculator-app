@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 const Calcuator = () => {
   const [myNo, setMyNo] = useState("");
@@ -26,7 +26,7 @@ const Calcuator = () => {
   const multiply = "*";
   const divide = "/";
   const del = "DEL";
- 
+
   function getNo(number) {
     setDisplayResult("");
     if (number && finalanswer === false) {
@@ -45,9 +45,13 @@ const Calcuator = () => {
       setMySymbol((text) => [...text, data, value]);
       setMyNo("");
     } else if (value && finalanswer) {
-      setMySymbol([data,value]);
+      setMySymbol([data, value]);
       setMyNo("");
       setFinalanswer(false);
+    }
+    if (myNo === "undefined" && value) {
+      setMySymbol(value);
+      setMyNo("");
     }
   }
   const deleteButton = () => {
@@ -60,7 +64,11 @@ const Calcuator = () => {
       const flattenedAns = ans.flat(1);
       setMySymbol(flattenedAns.slice(0, flattenedAns.length - 1));
     }
-    if (displayResult && myNo == "") {
+    if (displayResult && myNo === "") {
+      setDisplayResult("");
+    }
+    if (myNo === "Synthax error" || myNo === "undefined") {
+      setMyNo("");
       setDisplayResult("");
     }
   };
@@ -82,7 +90,7 @@ const Calcuator = () => {
         Answer = "Synthax error";
       }
     }
-    if (Answer == "Infinity" || Answer == NaN) {
+    if (Answer === "Infinity" || isNaN(Answer)) {
       Answer = "undefined";
     }
     setMyNo(Answer.toString());

@@ -8,10 +8,10 @@
   
 }
 header{
-  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
-  align-items: flex-end
+  align-items: flex-end;
+  font-size: 1rem;
 }
 .main-calc{
  width: 500px;
@@ -75,10 +75,7 @@ max-height: 550px;
   cursor: pointer;
   padding-top: 15px;
 }
-.no:not(#clear):hover{
-  opacity: 0.8;
-  background-color: #76756d
-}
+
 #clear{
   background-color: #f4e660;
   border-radius: 30px;
@@ -102,11 +99,19 @@ max-height: 550px;
   padding-top: 10px;
   cursor: pointer;
 }
-.symbol:hover{
-  background-color: rgb(190, 100, 21);
-}
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 425px) {
   .main-calc{
-    transform: scale(0.7,0.8);
+    width: 95%;
+    margin-right: 17px;
   } 
-}
+  }
+  @media only screen and (min-width:900px){
+    .no:not(#clear):hover{
+      opacity: 0.8;
+      background-color: #76756d
+    }
+    .symbol:hover{
+      background-color: rgb(190, 100, 21);
+    }
+  }
