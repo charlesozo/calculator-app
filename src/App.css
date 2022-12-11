@@ -17,13 +17,9 @@ header {
   height: 80vh;
   max-height: 550px;
 }
-/* .main-calc:hover{
-  transform: scale(0.7,0.8);
-} */
 .main-display {
   width: 100%;
   height: 40%;
-  /* border: 2px solid green; */
   background-color: white;
 }
 .after-display {
@@ -38,7 +34,6 @@ header {
 }
 .display {
   height: 50%;
-  /* text-align: end; */
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -57,7 +52,6 @@ header {
 }
 .number-section {
   width: 80%;
-  /* border: 2px solid blue; */
   height: 100%;
   margin-right: 100px;
   background-color: #070702;
@@ -96,7 +90,6 @@ header {
   display: block;
 }
 .symbol {
-  /* border: 1px solid green; */
   height: calc(100% / 6);
   font-size: 1.4rem;
   text-align: center;
@@ -109,10 +102,4 @@ header {
     width: 95%;
     margin-right: 13px;
   }
-  /* .display {
-    text-align: start;
-  }
-  .after-display {
-    text-align: start;
-  } */
 }

@@ -80,24 +80,25 @@ const Calcuator = () => {
   };
 
   function getFinalAnswer() {
-    setMySymbol("");
-    setDisplayResult(myAns);
-    let Answer;
-    try {
-      Answer = eval(myAns.join(""));
-    } catch (err) {
-      if (err) {
-        Answer = "Synthax error";
+    if (myNo) {
+      setMySymbol("");
+      setDisplayResult(myAns);
+      let Answer;
+      try {
+        Answer = eval(myAns.join(""));
+      } catch (err) {
+        if (err) {
+          Answer = "Synthax error";
+        }
       }
+      if (Answer == "Infinity" || isNaN(Answer)) {
+        Answer = "undefined";
+      }
+      console.log(Answer);
+      setMyNo(Answer.toString());
+      setFinalanswer(true);
     }
-    if (Answer == "Infinity" || isNaN(Answer)) {
-      Answer = "undefined";
-    }
-    console.log(Answer);
-    setMyNo(Answer.toString());
-    setFinalanswer(true);
   }
-  console.log(displayResult);
   return (
     <>
       <header>
