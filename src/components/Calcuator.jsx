@@ -39,7 +39,6 @@ const Calcuator = () => {
   }
   function getSymbol(value) {
     const data = Object.values(myNo).join("");
-
     setDisplayResult("");
     if (value && finalanswer === false) {
       setMySymbol((text) => [...text, data, value]);
@@ -86,13 +85,15 @@ const Calcuator = () => {
       let Answer;
       try {
         Answer = eval(myAns.join(""));
+        if (Answer == "Infinity" || isNaN(Answer) || Answer == "-Infinity") {
+          Answer = "undefined";
+        }
       } catch (err) {
         if (err) {
+          console.log(err)
           Answer = "Synthax error";
         }
-      }
-      if (Answer == "Infinity" || isNaN(Answer)) {
-        Answer = "undefined";
+        
       }
       console.log(Answer);
       setMyNo(Answer.toString());
